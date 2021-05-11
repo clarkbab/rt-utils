@@ -22,7 +22,7 @@ def load_sorted_image_series(dicom_series_path: str):
         raise Exception("No DICOM Images found in input path")
 
     # Sort slices in ascending order
-    series_data.sort(key=lambda ds: ds.SliceLocation, reverse=False)
+    series_data.sort(key=lambda ds: ds.ImagePositionPatient[2], reverse=False)
 
     return series_data
 

@@ -1,16 +1,16 @@
 import setuptools
 
-VERSION = '1.1.2'
+VERSION = '0.0.1'
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 with open('requirements.txt') as f:
     required = f.read().splitlines()
 
 setuptools.setup(
-    name="rt-utils", 
+    name="rt-utils-clarkbab",
     version=VERSION,
-    author="Asim Shrestha",
-    author_email="asim.shrestha@hotmail.com",
+    author="Brett Clark",
+    author_email="clarkbab@gmail.com",
     description="A small library for handling masks and RT-Structs",
     long_description=long_description,
     long_description_content_type="text/markdown",
