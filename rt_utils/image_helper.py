@@ -177,7 +177,8 @@ def get_slice_mask_from_slice_contour_data(series_slice: Dataset, slice_contour_
 def get_contour_fill_mask(series_slice: Dataset, contour_coords):
     # Format data
     reshaped_contour_data = np.reshape(contour_coords, [len(contour_coords) // 3, 3])
-    translated_contour_data  = translate_contour_to_pixel_coordinants(reshaped_contour_data, series_slice)
+    translated_contour_data = translate_contour_to_pixel_coordinants(reshaped_contour_data, series_slice)
+    translated_contour_data = np.around(translated_contour_data)
     polygon = [np.array([translated_contour_data[:, :2]], dtype=np.int32)]
 
     # Create mask for the region. Fill with 1 for ROI
